@@ -14,3 +14,8 @@ Stringer-X is a simple String encoder tool that transforms your strings into a f
 
 1. Select the text you want to encode.
 2. Navigate to the "Edit" menu and choose "StringerX" or use the shortcut "Ctrl + Shift +  *Equals*".
+
+
+## IntelliJ
+
+ - [Plug-in in IntelliJ Marketplace](https://plugins.jetbrains.com/plugin/20650-stringer-x)
