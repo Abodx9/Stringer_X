@@ -1,0 +1,68 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.abodx.stringer.Stringer_X</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Stringer_X</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="abodx@gmx.de" url="https://instabio.cc/21127nhPn3y">YoctoSoft</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+      Stringer-X is simple String encoder
+
+     <ul>
+         <li>-- It basically turns your String to something hard to understand</li>
+         <li>-- You can use this tool to encode Android Apps' string as well</li>
+         <li>-- If you are using Kotlin do not worry, just paste and the ide</li>
+         <li>-- will convert it for you.</li>
+
+         <li>Usage:</li>
+
+         <li>1. Select text</li>
+         <li>2. Edit -> StringerX</li>
+         <li>or you can simply use this Shortcut (shift + =)</li>
+         <li>for mac it is (shift + =)</li>
+         <li>-----------------------------------------------</li>
+
+         <li>Note:</li>
+
+         <li>when selecting the String, select it with its double quotes.</li>
+         <li>this is not an encryption, it is just simple thing.</li>
+         <li>---------------------------------------------------</li>
+
+         <li>It is my first plugin I hope you all like it</li>
+
+         <li>© Ab0dx2</li>
+      </ul>
+
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <action id="StringerX" class="com.abodx.stringer.stringer_x.stringerx" text="StringerX"
+                description="Encode selected String using my way">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for XWin" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for KDE" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for GNOME" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift EQUALS"/>
+        </action>
+    </actions>
+
+</idea-plugin>
