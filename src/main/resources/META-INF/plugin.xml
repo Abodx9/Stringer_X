@@ -14,34 +14,28 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-      Stringer-X is simple String encoder
-
      <ul>
-         <li>-- It basically turns your String to something hard to understand</li>
-         <li>-- You can use this tool to encode Android Apps' string as well</li>
-         <li>-- If you are using Kotlin do not worry, just paste and the ide</li>
-         <li>-- will convert it for you.</li>
+        <p><span style="font-size: x-large;">Stringer-X </span></p>
+<p>is simple String encoder</p>
+<p><br />-- It basically turns your String to something hard to understand<br />-- You can use this tool to encode Android Apps' string as well<br />-- If you are using Kotlin do not worry, just paste and the ide<br />-- will convert it for you.</p>
+<p><span style="font-size: x-large;">Usage:</span></p>
+<p>1. Select text<br />2. Edit -&gt; StringerX<br />or you can simply use this Shortcut (shift + =)</p>
+<p>-----------------------------------------------</p>
+<p><span style="font-size: x-large;">Note:</span></p>
+<p>when selecting the String, select it with its double quotes.<br />this is not an encryption, it is just simple thing.<br />---------------------------------------------------</p>
+<p>It is my first plugin I hope you all like it</p>
+<p><a title="&copy; Ab0dx2" href="https://abodx9.github.io/LinksBio/">&copy; Ab0dx2</a></p>
 
-         <li>Usage:</li>
-
-         <li>1. Select text</li>
-         <li>2. Edit -> StringerX</li>
-         <li>or you can simply use this Shortcut (shift + =)</li>
-         <li>for mac it is (shift + =)</li>
-         <li>-----------------------------------------------</li>
-
-         <li>Note:</li>
-
-         <li>when selecting the String, select it with its double quotes.</li>
-         <li>this is not an encryption, it is just simple thing.</li>
-         <li>---------------------------------------------------</li>
-
-         <li>It is my first plugin I hope you all like it</li>
-
-         <li>© Ab0dx2</li>
+ <h2>Updates:</h2>
+      <ul>
+         <li>Fixed a bug related to encoding special characters.</li>
+         <li>Updated keyboard shortcut to CTRL + SHIFT + EQUALS for easier access.</li>
+         <li>Now supports the latest version of IntelliJ IDEA (2024.3 and newer).</li>
       </ul>
-
-    ]]></description>
+   </ul>
+   
+      </ul>]]>
+	  </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -57,11 +51,11 @@
                 description="Encode selected String using my way">
             <add-to-group group-id="EditMenu" anchor="last"/>
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift EQUALS"/>
-            <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for XWin" first-keystroke="shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for KDE" first-keystroke="shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for GNOME" first-keystroke="shift EQUALS"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for KDE" first-keystroke="ctrl shift EQUALS"/>
+            <keyboard-shortcut keymap="Default for GNOME" first-keystroke="ctrl shift EQUALS"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift EQUALS"/>
         </action>
     </actions>
 
