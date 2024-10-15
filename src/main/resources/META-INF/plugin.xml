@@ -8,7 +8,7 @@
     <name>Stringer_X</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="abodx@gmx.de" url="https://instabio.cc/21127nhPn3y">YoctoSoft</vendor>
+    <vendor email="abodx@gmx.de" url="https://abodx9.github.io/LinksBio/">YoctoSoft</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
@@ -28,14 +28,15 @@
 
  <h2>Updates:</h2>
       <ul>
-         <li>Fixed a bug related to encoding special characters.</li>
+         <li>Using SecureRandom instead of Random</li>
          <li>Updated keyboard shortcut to CTRL + SHIFT + EQUALS for easier access.</li>
-         <li>Now supports the latest version of IntelliJ IDEA (2024.3 and newer).</li>
+         <li>Now supports the latest version of IntelliJ IDEA</li>
+         <li>Adding non-ascii variables</li>
       </ul>
    </ul>
-   
+
       </ul>]]>
-	  </description>
+    </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -50,7 +51,7 @@
         <action id="StringerX" class="com.abodx.stringer.stringer_x.stringerx" text="StringerX"
                 description="Encode selected String using my way">
             <add-to-group group-id="EditMenu" anchor="last"/>
-            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift EQUALS"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl shift EQUALS"/>
             <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl shift EQUALS"/>
             <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl shift EQUALS"/>
             <keyboard-shortcut keymap="Default for KDE" first-keystroke="ctrl shift EQUALS"/>
