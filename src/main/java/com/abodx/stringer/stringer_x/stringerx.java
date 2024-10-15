@@ -8,13 +8,12 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
-
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * Created by Abdulmajid on 2022-12-12.
  *
- * String encoder v1.0
+ * String encoder v1.4
  *
  * email - abodx@gmx.de
  */
@@ -42,11 +41,14 @@ public class stringerx extends AnAction {
             public void run() {
                 String inp = selected.replaceAll("\"","");
                 StringBuilder ob = new StringBuilder();
-                Random r = new Random(System.currentTimeMillis());
+
+                // Using SecureRandom to generate random numbers instead of Random
+                SecureRandom r = new SecureRandom();
                 byte[] b = inp.getBytes();
                 int c = b.length;
 
-                ob.append("(new Object() {int x;public String toString() {byte[] stringerxAbodxtestx = new byte[").append(c).append("];");
+                // Adding non-ASCII characters to the string
+                ob.append("(new Object() {int ﷱﷷﷵ;public String toString() {byte[] ﷰﷹﷱ = new byte[").append(c).append("];");
 
                 for (int i = 0; i < c; ++i) {
                     int x = r.nextInt();
@@ -54,17 +56,17 @@ public class stringerx extends AnAction {
 
                     x = (x & ~(0xff << f)) | (b[i] << f);
 
-                    ob.append("x = ").append(x).append(";").append("stringerxAbodxtestx[").append(i).append("] = (byte) (x >>> ").append(f).append(");");
+                    ob.append("ﷱﷷﷵ = ").append(x).append(";").append("ﷰﷹﷱ[").append(i).append("] = (byte) (ﷱﷷﷵ >>> ").append(f).append(");");
 
                 }
-                ob.append("return new String(stringerxAbodxtestx);");
+                ob.append("return new String(ﷰﷹﷱ);");
                 ob.append("}}.toString())");
 
                 document.replaceString(start, end, ob.toString());
             }
         };
 
-        //Making the replacement with the encoded string
+        // Replace the text in a write action, this is to make sure that the document is not changed outside a write action
         WriteCommandAction.runWriteCommandAction(project, runnable);
     }
 }
