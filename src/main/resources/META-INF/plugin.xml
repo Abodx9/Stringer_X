@@ -19,7 +19,7 @@
 <p>is simple String encoder</p>
 <p><br />-- It basically turns your String to something hard to understand<br />-- You can use this tool to encode Android Apps' string as well<br />-- If you are using Kotlin do not worry, just paste and the ide<br />-- will convert it for you.</p>
 <p><span style="font-size: x-large;">Usage:</span></p>
-<p>1. Select text<br />2. Edit -&gt; StringerX<br />or you can simply use this Shortcut (shift + =)</p>
+<p>1. Select text<br />2. Right Click -&gt; StringerX</p>
 <p>-----------------------------------------------</p>
 <p><span style="font-size: x-large;">Note:</span></p>
 <p>when selecting the String, select it with its double quotes.<br />this is not an encryption, it is just simple thing.<br />---------------------------------------------------</p>
@@ -29,7 +29,8 @@
  <h2>Updates:</h2>
       <ul>
          <li>Using SecureRandom instead of Random</li>
-         <li>Updated keyboard shortcut to CTRL + SHIFT + EQUALS for easier access.</li>
+         <li>Keyboard shortcut was removed</li>
+         <li>For easier access the function was moved to the edit pop-up menu</li>
          <li>Now supports the latest version of IntelliJ IDEA</li>
          <li>Adding non-ascii variables</li>
       </ul>
@@ -50,13 +51,7 @@
     <actions>
         <action id="StringerX" class="com.abodx.stringer.stringer_x.stringerx" text="StringerX"
                 description="Encode selected String using my way">
-            <add-to-group group-id="EditMenu" anchor="last"/>
-            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl shift EQUALS"/>
-            <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for KDE" first-keystroke="ctrl shift EQUALS"/>
-            <keyboard-shortcut keymap="Default for GNOME" first-keystroke="ctrl shift EQUALS"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift EQUALS"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
 
